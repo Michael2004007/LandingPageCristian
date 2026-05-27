@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cris Sertão - Sertanejo de Verdade</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-cs">C<span class="logo-dot">✦</span>S</span>
+      <span class="logo-text">CRIS SERTÃO</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#musica">Música</a></li>
+      <li><a href="#repertorio">Repertório</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#contato" class="nav-cta">Contratar</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="{{ url_for('static', filename='images/photo3.jpeg') }}" alt="Cris Sertão" class="hero-img">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-pre">Sertanejo de Verdade</p>
+      <h1 class="hero-title">
+        <span class="hero-cris">CRIS</span>
+        <span class="hero-sertao">SERTÃO</span>
+      </h1>
+      <p class="hero-sub">Uma voz marcante, presença de palco e repertório que honra as raízes do sertanejo brasileiro.</p>
+      <div class="hero-btns">
+        <a href="#contato" class="btn btn-gold">Solicitar Orçamento</a>
+        <a href="https://open.spotify.com/intl-pt/album/6iMHgttx1Jvo5Hy4OO04sq" target="_blank" class="btn btn-outline">
+          <i class="fab fa-spotify"></i> Ouvir no Spotify
+        </a>
+      </div>
+    </div>
+    <div class="hero-portrait hero-portrait-main">
+      <img src="{{ url_for('static', filename='images/band2.jpeg') }}" alt="Cris Sertão no palco">
+    </div>
+    <div class="hero-portrait hero-portrait-small">
+      <img src="{{ url_for('static', filename='images/band1.jpeg') }}" alt="Cris Sertão cantando">
+    </div>
+    <div class="hero-scroll">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-imgs">
+          <div class="sobre-img-main">
+            <img src="{{ url_for('static', filename='images/photo6.jpeg') }}" alt="Cris Sertão na fazenda">
+          </div>
+          <div class="sobre-img-secondary">
+            <img src="{{ url_for('static', filename='images/photo7.jpeg') }}" alt="Cris Sertão na estrada">
+          </div>
+          <div class="sobre-badge">
+            <span class="badge-num">15</span>
+            <span class="badge-txt">Músicas<br>Lançadas</span>
+          </div>
+        </div>
+        <div class="sobre-texto">
+          <p class="section-label">Quem é</p>
+          <h2 class="section-title">Um Artista em<br><em>Ascensão Constante</em></h2>
+          <p class="sobre-p">Nascido em Londrina/PR dentro de uma família sertaneja, Cris Sertão cresceu respirando a essência do gênero. Com letras marcantes, composições autorais e uma voz que emociona, ele carrega amor, romantismo e os grandes clássicos sertanejos, construindo uma <strong>identidade própria e inconfundível</strong>.</p>
+          <p class="sobre-p">Suas músicas no Spotify registram crescimento contínuo e orgânico, reflexo de um trabalho autêntico que ressoa com quem busca verdade e qualidade musical.</p>
+          <div class="sobre-pilares">
+            <div class="pilar">
+              <i class="fas fa-feather-alt"></i>
+              <div>
+                <strong>Compositor Autoral</strong>
+                <span>Letras fortes e emocionais de vivência real</span>
+              </div>
+            </div>
+            <div class="pilar">
+              <i class="fas fa-heart"></i>
+              <div>
+                <strong>Conexão Genuína</strong>
+                <span>Cada canção carrega autenticidade e profundidade</span>
+              </div>
+            </div>
+            <div class="pilar">
+              <i class="fas fa-star"></i>
+              <div>
+                <strong>Destaque no Cenário</strong>
+                <span>Qualidade que se sobressai entre os novos artistas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="musica" id="musica">
+    <div class="musica-bg">
+      <img src="{{ url_for('static', filename='images/photo8.jpeg') }}" alt="Cris Sertão">
+      <div class="musica-overlay"></div>
+    </div>
+    <div class="container musica-content">
+      <p class="section-label light">O Álbum</p>
+      <h2 class="section-title light">Identidade</h2>
+      <p class="musica-desc">O álbum que define quem é Cris Sertão: raiz verdadeira, identidade marcante e emoção em cada faixa.</p>
+      <a href="https://open.spotify.com/intl-pt/album/6iMHgttx1Jvo5Hy4OO04sq" target="_blank" class="btn btn-gold btn-large">
+        <i class="fab fa-spotify"></i> Ouvir no Spotify
+      </a>
+      <div class="musica-stats">
+        <div class="stat">
+          <span class="stat-num">15</span>
+          <span class="stat-lab">Músicas Lançadas</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">∞</span>
+          <span class="stat-lab">Emoção em Cada Show</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-lab">Sertanejo de Raiz</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="repertorio" id="repertorio">
+    <div class="container">
+      <p class="section-label center">Nos Shows</p>
+      <h2 class="section-title center">Repertório Completo<br><em>e Versátil</em></h2>
+      <p class="repertorio-desc">Composições autorais se misturam com interpretações emocionantes dos maiores clássicos do sertanejo brasileiro. Um show pensado para encantar todas as gerações.</p>
+      <div class="rep-grid">
+        <div class="rep-card own">
+          <div class="rep-icon"><i class="fas fa-music"></i></div>
+          <h3>Músicas Autorais</h3>
+          <p>Composições próprias com letras que tocam o coração e criam uma identidade musical única e marcante</p>
+        </div>
+        <div class="rep-card">
+          <div class="rep-icon"><i class="fas fa-guitar"></i></div>
+          <h3>Daniel</h3>
+          <p>Clássicos atemporais que emocionam gerações inteiras com toda a força do sertanejo raiz</p>
+        </div>
+        <div class="rep-card">
+          <div class="rep-icon"><i class="fas fa-guitar"></i></div>
+          <h3>Chitãozinho & Xororó</h3>
+          <p>Sucessos que marcaram a história do sertanejo brasileiro e que o público ama cantar junto</p>
+        </div>
+        <div class="rep-card">
+          <div class="rep-icon"><i class="fas fa-guitar"></i></div>
+          <h3>Zezé di Camargo & Luciano</h3>
+          <p>Canções românticas inesquecíveis que conquistam multidões e emocionam de verdade</p>
+        </div>
+        <div class="rep-card">
+          <div class="rep-icon"><i class="fas fa-guitar"></i></div>
+          <h3>Bruno & Marrone</h3>
+          <p>Hits consagrados que fazem todo mundo cantar junto e criar memórias inesquecíveis</p>
+        </div>
+        <div class="rep-card highlight">
+          <div class="rep-icon"><i class="fas fa-crown"></i></div>
+          <h3>Show Memorável</h3>
+          <p>Combinação estratégica que garante um espetáculo emocionante, sempre aplaudido de pé</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="galeria" id="galeria">
+    <div class="container">
+      <p class="section-label center">Momentos</p>
+      <h2 class="section-title center">Galeria</h2>
+      <div class="galeria-grid">
+        <div class="gal-item"><img src="{{ url_for('static', filename='images/magnific_photorealistic-concert-im_b1XBJjR5Y2.png') }}" alt="Cris Sertão ao vivo"></div>
+        <div class="gal-item"><img src="{{ url_for('static', filename='images/magnific_photorealistic-concert-im_LSvaiqAswO.png') }}" alt="Cris Sertão com violão"></div>
+        <div class="gal-item"><img src="{{ url_for('static', filename='images/magnific_hyperrealistic-indoor-are_BtZ2JtdoQR.png') }}" alt="Cris Sertão no palco"></div>
+        <div class="gal-item"><img src="{{ url_for('static', filename='images/magnific_preserve-exact-facial-str_XIRZO3WBfo.png') }}" alt="Cris Sertão em show"></div>
+        <div class="gal-item"><img src="{{ url_for('static', filename='images/magnific_preserve-exact-facial-str_7PFHj6nJAL.png') }}" alt="Cris Sertão cantando"></div>
+        <div class="gal-item"><img src="{{ url_for('static', filename='images/magnific_preserve-exact-facial-str_yNb5lf7PW9.png') }}" alt="Cris Sertão tocando violão"></div>
+        <div class="gal-item"><img src="{{ url_for('static', filename='images/magnific_hyperrealistic-romantic-c_YT7OsP7WeC.png') }}" alt="Cris Sertão sertanejo romântico"></div>
+        <div class="gal-item"><img src="{{ url_for('static', filename='images/magnific_ultrarealistic-mediumshot_NR1xKY76D9.png') }}" alt="Cris Sertão no microfone"></div>
+        <div class="gal-item"><img src="{{ url_for('static', filename='images/magnific_epic-cinematic-concert-ph_WVJyPDJcXe.png') }}" alt="Cris Sertão em cena cinematográfica"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="porque">
+    <div class="container">
+      <p class="section-label center">Diferenciais</p>
+      <h2 class="section-title center">Por que Escolher<br><em>Cris Sertão?</em></h2>
+      <div class="porque-grid">
+        <div class="porque-card">
+          <div class="porque-num">01</div>
+          <i class="fas fa-fingerprint porque-icon"></i>
+          <h3>Autenticidade</h3>
+          <p>Verdade e identidade em cada apresentação. Sem artificialismo, sem imitação: apenas sertanejo de raiz com identidade própria.</p>
+        </div>
+        <div class="porque-card">
+          <div class="porque-num">02</div>
+          <i class="fas fa-music porque-icon"></i>
+          <h3>Qualidade Musical</h3>
+          <p>Composições autorais de alto nível e interpretações impecáveis dos maiores clássicos do gênero.</p>
+        </div>
+        <div class="porque-card">
+          <div class="porque-num">03</div>
+          <i class="fas fa-users porque-icon"></i>
+          <h3>Público Garantido</h3>
+          <p>Lotação comprovada e engajamento real com os fãs. Repertório que agrada todas as gerações.</p>
+        </div>
+        <div class="porque-card">
+          <div class="porque-num">04</div>
+          <i class="fas fa-award porque-icon"></i>
+          <h3>Profissionalismo</h3>
+          <p>Estrutura completa, pontualidade e entrega de excelência em bares, festas municipais, festivais e eventos privados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="programacao">
+    <div class="container">
+      <p class="section-label center">Onde se Apresenta</p>
+      <h2 class="section-title center">Ideal para Sua<br><em>Programação</em></h2>
+      <p class="repertorio-desc">Cris Sertão leva ao público muito mais que entretenimento: leva cultura, verdade e emoção genuína através da música sertaneja de qualidade.</p>
+      <div class="prog-grid">
+        <div class="prog-card">
+          <div class="prog-icon"><i class="fas fa-broadcast-tower"></i></div>
+          <h3>Rádios</h3>
+          <p>Conteúdo autêntico que valoriza o verdadeiro sertanejo e conquista audiência fiel</p>
+        </div>
+        <div class="prog-card">
+          <div class="prog-icon"><i class="fas fa-city"></i></div>
+          <h3>Eventos Municipais</h3>
+          <p>Show completo que atrai público diverso e fortalece a cultura regional</p>
+        </div>
+        <div class="prog-card">
+          <div class="prog-icon"><i class="fas fa-calendar-alt"></i></div>
+          <h3>Festivais Culturais</h3>
+          <p>Artista que representa a essência do gênero com qualidade e profissionalismo</p>
+        </div>
+        <div class="prog-card">
+          <div class="prog-icon"><i class="fas fa-glass-cheers"></i></div>
+          <h3>Eventos Privados</h3>
+          <p>Bares, casas de show e eventos corporativos com presença de palco marcante</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contato" id="contato">
+    <div class="contato-bg">
+      <img src="{{ url_for('static', filename='images/photo4.jpeg') }}" alt="Cris Sertão">
+      <div class="contato-overlay"></div>
+    </div>
+    <div class="container contato-content">
+      <p class="section-label light">Leve para sua cidade</p>
+      <h2 class="section-title light">Vamos Fazer<br><em>Acontecer?</em></h2>
+      <p class="contato-desc">Entre em contato para orçamentos, contratações e disponibilidade de agenda. Ideal para rádios, eventos municipais, festivais culturais e eventos privados.</p>
+      <div class="contato-btns">
+        <a href="https://wa.me/5511930090061" target="_blank" class="btn btn-whatsapp">
+          <i class="fab fa-whatsapp"></i> Contratar Show
+        </a>
+        <a href="https://wa.me/5511963680568" target="_blank" class="btn btn-whatsapp">
+          <i class="fab fa-whatsapp"></i> Ponerse en Contacto
+        </a>
+      </div>
+      <div class="social-links">
+        <a href="https://instagram.com/cris.sertao" target="_blank" class="social-btn">
+          <i class="fab fa-instagram"></i>
+          <span>@cris.sertao</span>
+        </a>
+        <a href="https://open.spotify.com/intl-pt/album/6iMHgttx1Jvo5Hy4OO04sq" target="_blank" class="social-btn">
+          <i class="fab fa-spotify"></i>
+          <span>Spotify</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-cs">C<span class="logo-dot">✦</span>S</span>
+        <span class="logo-text">CRIS SERTÃO</span>
+      </div>
+      <p class="footer-tagline">Sertanejo de Verdade</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/cris.sertao" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5511930090061" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://open.spotify.com/intl-pt/album/6iMHgttx1Jvo5Hy4OO04sq" target="_blank"><i class="fab fa-spotify"></i></a>
+      </div>
+      <p class="footer-copy">© 2026 Cris Sertão - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
