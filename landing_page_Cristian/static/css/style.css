@@ -1038,8 +1038,7 @@ body {
 }
 
 .btn,
-.social-btn,
-.nav-cta {
+.social-btn {
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -1048,33 +1047,38 @@ body {
 }
 
 .btn::before,
-.social-btn::before,
-.nav-cta::before {
+.social-btn::before {
   content: "";
   position: absolute;
   inset: -2px;
   z-index: -1;
-  background: linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.38) 45%, transparent 62%);
+  background: linear-gradient(115deg, transparent 0%, rgba(241,201,106,0.24) 45%, transparent 62%);
   transform: translateX(-125%) skewX(-18deg);
   transition: transform 0.7s var(--ease-pro);
 }
 
 .btn:hover::before,
-.social-btn:hover::before,
-.nav-cta:hover::before {
+.social-btn:hover::before {
   transform: translateX(125%) skewX(-18deg);
 }
 
 .btn:hover,
-.social-btn:hover,
-.nav-cta:hover {
+.social-btn:hover {
   transform: translate3d(var(--mag-x), calc(var(--mag-y) - 4px), 0) scale(1.018);
 }
 
 .btn:active,
-.social-btn:active,
-.nav-cta:active {
+.social-btn:active {
   transform: translate3d(var(--mag-x), calc(var(--mag-y) - 1px), 0) scale(0.985);
+}
+
+.nav-cta {
+  overflow: visible;
+}
+
+.nav-cta::before,
+.nav-cta::after {
+  display: none !important;
 }
 
 .button-ripple {
@@ -1212,26 +1216,17 @@ body {
   clip-path: inset(0 0 0 0 round 0);
 }
 
-.motion-ready .gal-item.reveal-motion {
-  transform: translate3d(0, 42px, 0) scale(0.96);
-  clip-path: inset(0 0 100% 0 round 6px);
-}
-
-.motion-ready .gal-item.reveal-motion.visible {
-  transform: translate3d(0, 0, 0) scale(1);
-  clip-path: inset(0 0 0 0 round 6px);
-}
-
 .motion-ready .rep-card.reveal-motion,
 .motion-ready .porque-card.reveal-motion,
 .motion-ready .prog-card.reveal-motion {
-  transform: translate3d(0, 28px, 0) rotateX(4deg);
+  transform: translate3d(0, 18px, 0) scale(0.985);
+  clip-path: inset(0 0 0 0 round 0);
 }
 
 .motion-ready .rep-card.reveal-motion.visible,
 .motion-ready .porque-card.reveal-motion.visible,
 .motion-ready .prog-card.reveal-motion.visible {
-  transform: translate3d(0, 0, 0) rotateX(0deg);
+  transform: translate3d(0, 0, 0) scale(1);
 }
 
 [data-parallax] {
@@ -1248,19 +1243,90 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 1;
-  background:
-    linear-gradient(110deg, transparent 0%, rgba(241,201,106,0.08) 42%, transparent 58%);
-  transform: translateX(-120%);
+  display: none;
+}
+
+.sobre,
+.repertorio,
+.galeria,
+.porque,
+.programacao,
+.musica,
+.contato {
+  position: relative;
+  overflow: hidden;
+}
+
+.sobre::before,
+.repertorio::before,
+.galeria::before,
+.porque::before,
+.programacao::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(1120px, calc(100% - 48px));
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(241,201,106,0.46), transparent);
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
   opacity: 0;
+  transition: transform 1.15s var(--ease-pro), opacity 0.8s ease;
 }
 
-.motion-ready .hero::after {
-  animation: cinematicSweep 2.6s 0.8s var(--ease-pro) forwards;
+.sobre.visible::before,
+.repertorio.visible::before,
+.galeria.visible::before,
+.porque.visible::before,
+.programacao.visible::before {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
 }
 
-.musica.visible::after,
-.contato.visible::after {
-  animation: cinematicSweep 1.9s var(--ease-pro) forwards;
+.section-title {
+  position: relative;
+}
+
+.section-title.center::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  margin: 22px auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+  opacity: 0;
+  transition: width 0.9s var(--ease-pro), opacity 0.6s ease;
+}
+
+.visible .section-title.center::after {
+  width: min(220px, 52vw);
+  opacity: 0.8;
+}
+
+.galeria-grid {
+  perspective: 1200px;
+}
+
+.gal-item {
+  opacity: 1;
+  transform: translateZ(0);
+}
+
+.galeria.visible .gal-item {
+  animation: gallerySettle 0.9s var(--ease-pro) both;
+  animation-delay: calc(var(--gal-delay, 0) * 70ms);
+}
+
+.galeria.visible .gal-item:nth-child(1) { --gal-delay: 0; }
+.galeria.visible .gal-item:nth-child(2) { --gal-delay: 1; }
+.galeria.visible .gal-item:nth-child(3) { --gal-delay: 2; }
+.galeria.visible .gal-item:nth-child(4) { --gal-delay: 1; }
+.galeria.visible .gal-item:nth-child(5) { --gal-delay: 2; }
+.galeria.visible .gal-item:nth-child(6) { --gal-delay: 3; }
+.galeria.visible .gal-item:nth-child(7) { --gal-delay: 2; }
+.galeria.visible .gal-item:nth-child(8) { --gal-delay: 3; }
+.galeria.visible .gal-item:nth-child(9) { --gal-delay: 4; }
 }
 
 @keyframes rippleBurst {
@@ -1284,6 +1350,17 @@ body {
   0% { opacity: 0; transform: translateX(-120%); }
   18% { opacity: 1; }
   100% { opacity: 0; transform: translateX(120%); }
+}
+
+@keyframes gallerySettle {
+  from {
+    opacity: 0.001;
+    transform: translate3d(0, 26px, 0) rotateX(5deg) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateX(0deg) scale(1);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

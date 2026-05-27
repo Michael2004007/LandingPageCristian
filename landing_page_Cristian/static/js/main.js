@@ -71,14 +71,14 @@ const sectionObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.28 });
 
 document.querySelectorAll(
-  '.sobre-grid, .pilar, .rep-card, .porque-card, .prog-card, .gal-item, .stat, .musica-content, .contato-content, .social-btn'
+  '.sobre-grid, .pilar, .rep-card, .porque-card, .prog-card, .stat, .musica-content, .contato-content, .social-btn'
 ).forEach((el, index) => {
   el.classList.add('reveal-motion');
   el.style.setProperty('--reveal-delay', `${Math.min(index % 8, 6) * 70}ms`);
   observer.observe(el);
 });
 
-document.querySelectorAll('.btn, .social-btn, .nav-cta').forEach(button => {
+document.querySelectorAll('.btn, .social-btn').forEach(button => {
   button.classList.add('interactive-sheen');
   button.addEventListener('pointermove', event => {
     const rect = button.getBoundingClientRect();
@@ -125,6 +125,10 @@ document.querySelectorAll('.hero-img, .musica-bg img, .contato-bg img').forEach(
 });
 
 document.querySelectorAll('.musica, .contato').forEach(section => {
+  sectionObserver.observe(section);
+});
+
+document.querySelectorAll('.sobre, .repertorio, .galeria, .porque, .programacao').forEach(section => {
   sectionObserver.observe(section);
 });
 
